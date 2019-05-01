@@ -7,14 +7,14 @@ import java.util.TreeSet;
 
 /**
  *
- * @author I.M.Bad
+ * @author 90051500
  */
 public class Manifest {
     
     // This tracks the quantity if each product in the manifest
-    private Map<Product, Integer> quantities;
+    public Map<Product, Integer> quantities;
     // This keeps a list of all products ordered by weight
-    private Set<Product> byWeight;
+    public Set<Product> byWeight;
 
     public Manifest() {
         quantities = new HashMap<>();
@@ -93,5 +93,37 @@ public class Manifest {
         }
         return false;
     }
+    
+    
+    /*
+    //Refactoring 1
+    // Method created to label Heavy if the box contains item more than 15Kg.
+    */
+    public boolean hasHeavyItems(){
+        for (Product p : quantities.keySet()) {
+            if (p.isHeavy()) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    /*
+    //Refactoring 2
+    // Method created to label Hazardious if the box contains hazardious item.
+    */
+    public boolean hasHazardousItems() {
+        for (Product p : quantities.keySet()) {
+            if (p.isHazardous()) {
+                return true;
+            }
+        }
+        return false;
+    }
+    //Syntax error was there
+// A closing bracket was missing.
+}
+
+
     
 
