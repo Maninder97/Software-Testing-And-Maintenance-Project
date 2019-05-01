@@ -120,7 +120,9 @@ public class Manifest {
         }
         return false;
     }
-
+    //Syntax error was there
+// A closing bracket was missing.
+}
 
 
     
