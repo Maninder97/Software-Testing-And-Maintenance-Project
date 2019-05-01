@@ -96,5 +96,19 @@ public class Box {
         return contents.hasFragileItems();
     }
     
-   
+    // method created to label hazardous on box
+    public boolean isHazardous() {
+        return contents.hasHazardousItems();
+        
+        // "return false" doesnt label "Hazard" on box
+        //return false;
+    }
+    
+    //Method created to label Heavy on box if it contains items more than 15Kg.
+    public boolean isHeavy() {
+        if (contents.getTotalWeight() > 15) {
+        return contents.hasHeavyItems();
+        }
+        return true;
+    }
 }
