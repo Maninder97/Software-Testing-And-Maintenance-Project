@@ -68,10 +68,8 @@ public class Box {
     }
     
     /*
-    //Refactoring 3
-    // The method below is already defined above *
+    //Refactoring 3: The method below is already defined above *
     */
-    
     /*public void addProduct(Product product) {
         if (canFit(product)) {
             contents.addProduct(product, 1);
